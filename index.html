@@ -105,8 +105,35 @@
 		<div class="action">
 			<h1>项 目 展 示</h1>
 			<div class="flicker-example" data-block-text="false">
-				<ul id="app">
-					<my-article v-for="item in article" :detail="item"></my-article>
+				<ul id="app" class="app">
+					<li>
+						<img src="images/xinxiw.png" />
+						<p><a href="http://www.newhopegroup.com/"><b>新希望集团(网址)</b></a></p>
+						<p><b>技术运用:</b>HTML5、CSS3、bootstrap、js</p>
+						<p><b>开发周期：</b>一个月</p>
+						<p><b>个人职责:</b>1、使用PS对美工的设计搞进行切图； 2、用html、css3以及bootstrap对页面原型进行布局搭建，并进行基本特效的制作； 3、利用Ajax配合后台完成页面异步刷新模块的建设；4、上线前bug调试及定期对网站进行更新迭代及改版。</p>					
+					</li>
+					<li>
+						<img src="images/jingziu_1.png" />
+						<p><a href="https://x1822867003.github.io/zgcxueyuan/"><b>景秀教育(网址)</b></a></p>
+						<p><b>技术运用:</b>HTML5、CSS3、js、jq、mediaQueries</p>
+						<p><b>开发周期：</b>一个月</p>
+						<p><b>个人职责:</b>1、通过采用HTML5+CSS3样式布局排版，使用media query实现页面的响应效果；  2、后期使用jQuery完成了页面的动态效果部分； 3、APP页面的开发，自适应、交互效果的实现； 4、研究并改善用户体验，负责产品的持续迭代工作</p>					
+					</li>
+					<li>
+						<img src="images/dianshang2.png" />
+						<p><a href="https://x1822867003.github.io/business/"><b>电商(网址)</b></a></p>
+						<p><b>技术运用:</b>HTML5+CSS3、jQuery、less.js、vue.js</p>
+						<p><b>开发周期：</b>一周</p>
+						<p><b>个人职责:</b>利用HTML5+CSS3等将页面实现用js、jQuery对页面原型进行布局搭建与功能的更好的实现，并进行特效制作使用插件完成图片放大、衣服换色、商品评分、左侧点小图变大图、商品结算等交互效果</p>					
+					</li>
+					<li>
+						<img src="images/keyang.png" />
+						<p><a href="https://x1822867003.github.io/keyang/index/index.html"><b>科洋科技(网址)</b></a></p>
+						<p><b>技术运用:</b>H5+CSS3,JS,JQ</p>
+						<p><b>开发周期：</b>一个月</p>
+						<p><b>个人职责:</b>使用HTML5新增语义化标签+CSS3还原所有模块的页面布局；用js实现各种交互效果（如：导航下拉菜单，轮播效果等）。</p>					
+					</li>
 				</ul>
 			</div>
 		</div>
@@ -133,64 +160,4 @@
 	</div>
 </div>
 </body>
-<script type="text/javascript">
-	Vue.component('my-article', { //实参
-		props: ['detail'], //接收传参组件  父组件传递给子组件参数
-		template:`
-					<li>
-						<img :src="detail.cover_url" />
-						<div class="bookWord">
-							<h4><a v-bind:href="detail.link">{{detail.name}}(网址)</a></h4>
-							<p> <b>技术运用：</b>{{detail.technology}}</p>
-							<p> <b>项目特色：</b>{{detail.features}}</p>
-							<p> <b>开发周期：</b>{{detail.date}}</p>
-							<p> <b>个人职责：</b>{{detail.duty}}</p>
-						</div>
-						<div class="clearfix"></div>
-					</li>
-				`
-	});
-	let vm = new Vue({
-		el: "#app",
-		data: {
-			article: [{
-				link:"https://x1822867003.github.io/newhopegroup/index.html",
-				name: "新希望集团",
-				technology:"HTML5、CSS3、bootstrap、js",
-				features:"",
-				date:"一个月",
-				duty:"1、使用PS对美工的设计搞进行切图；  2、用html、css3以及bootstrap对页面原型进行布局搭建，并进行基本特效的制作； 3、利用Ajax配合后台完成页面异步刷新模块的建设；4、上线前bug调试及定期对网站进行更新迭代及改版。 ",
-				cover_url: "images/xinxiw.png"
-			},
-			{
-				link:"https://x1822867003.github.io/zgcxueyuan/",
-				name: "景秀教育",
-				technology:"HTML5、CSS3、js、jq、mediaQueries",
-				features:"H5语义化标签、js响应式轮播图、jQuery模态框，mediaQueries响应式网页",
-				date:"一个月",
-				duty:"1、通过采用HTML5+CSS3样式布局排版，使用media query实现页面的响应效果；  2、后期使用jQuery完成了页面的动态效果部分； 3、APP页面的开发，自适应、交互效果的实现； 4、研究并改善用户体验，负责产品的持续迭代工作",
-				cover_url: "images/jingziu_1.png"
-			},
-			{
-				link:"https://x1822867003.github.io/business/",
-				name: "电商",
-				technology:"HTML5+CSS3、jQuery、less.js、vue.js",
-				features:"该项目中的交互效果较多，如：图片放大、衣服换色、商品评分、左侧点小图变大图等效果",
-				date:"一周",
-				duty:"利用HTML5+CSS3等将页面实现用js、jQuery对页面原型进行布局搭建与功能的更好的实现，并进行特效制作使用插件完成图片放大、衣服换色、商品评分、左侧点小图变大图、商品结算等交互效果",
-				cover_url: "images/dianshang2.png"
-			},
-			{
-				link:"https://x1822867003.github.io/keyang/index/index.html",
-				name: "科洋科技",
-				technology:"H5+CSS3,JS,JQ",
-				features:"",
-				date:"2个月",
-				duty:"使用HTML5新增语义化标签+CSS3还原所有模块的页面布局；用js实现各种交互效果（如：导航下拉菜单，轮播效果等）。",
-				cover_url: "images/keyang.png"
-			},
-			]
-		}
-	});
-</script>
 </html>
